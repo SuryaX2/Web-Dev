@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex Box excercise</title>
+</head>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+</style>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        font-family: 'Poppins', sans-serif;
+
+    }
+
+    .nav {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        height: 15vh;
+    }
+
+    .nav ul {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+    }
+
+    ul li {
+        display: flex;
+        list-style: none;
+        padding: 20px;
+        font-size: 16px;
+        font-weight: 400;
+        color:#3c3939a1;
+    }
+
+    img {
+        width: auto;
+        height: 60px;
+    }
+    .logo{
+        margin-right: 5px;
+    }
+</style>
+
+<body>
+    <header>
+        <div class="nav">
+            <div class="logo">
+                <img src="https://www.ultraedit.com/wp-content/uploads/2023/01/UE-Logo-1.webp" alt="">
+            </div>
+            <ul>
+                <li>Products <p>&#129171;</p>
+                </li>
+                <li>Pricing<p>&#129171;</p>
+                </li>
+                <li>Resources<p>&#129171;</p>
+                </li>
+                <li>About us<p>&#129171;</p>
+                </li>
+            </ul>
+        </div>
+    </header>
+</body>
+
+</html>

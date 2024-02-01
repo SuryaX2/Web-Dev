@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            font-family: cursive;
+        }
+
+        div {
+            height: 30vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        button {
+            padding: 0.6em 2em;
+            border: none;
+            outline: none;
+            color: rgb(255, 255, 255);
+            background: #111;
+            cursor: pointer;
+            position: relative;
+            z-index: 0;
+            border-radius: 10px;
+            user-select: none;
+            -webkit-user-select: none;
+            touch-action: manipulation;
+        }
+
+        button:before {
+            content: "";
+            background: linear-gradient(45deg,
+                    #ff0000,
+                    #ff7300,
+                    #fffb00,
+                    #48ff00,
+                    #00ffd5,
+                    #002bff,
+                    #7a00ff,
+                    #ff00c8,
+                    #ff0000);
+            position: absolute;
+            top: -2px;
+            left: -2px;
+            background-size: 400%;
+            z-index: -1;
+            filter: blur(5px);
+            -webkit-filter: blur(5px);
+            width: calc(100% + 4px);
+            height: calc(100% + 4px);
+            animation: glowing-button-85 20s linear infinite;
+            transition: opacity 0.3s ease-in-out;
+            border-radius: 10px;
+        }
+
+        @keyframes glowing-button-85 {
+            0% {
+                background-position: 0 0;
+            }
+
+            50% {
+                background-position: 400% 0;
+            }
+
+            100% {
+                background-position: 0 0;
+            }
+        }
+
+        button:after {
+            z-index: -1;
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: #222;
+            left: 0;
+            top: 0;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <!-- <button onclick="quantity;
+        console.log(`Cart Quantity : ${quantity}`);
+        ">Show Cart Quantity</button>
+        <button onclick="quantity++;
+        console.log(`Cart Quantity : ${quantity}`);
+        ">Add to Cart</button>
+        <button onclick="quantity+=2;
+        console.log(`Cart Quantity : ${quantity}`);
+        ">+2</button>
+        <button onclick="quantity+=3;
+        console.log(`Cart Quantity : ${quantity}`);
+        ">+3</button>
+        <button onclick="quantity+=4;
+        console.log(`Cart Quantity : ${quantity}`);
+        ">+4</button>
+        <button onclick="quantity+=5;
+        console.log(`Cart Quantity : ${quantity}`);
+        ">+5</button>
+        <button onclick="quantity-=2;
+        console.log(`Cart Quantity : ${quantity}`);
+        ">-2</button>
+        <button onclick="quantity-=3;
+        console.log(`Cart Quantity : ${quantity}`);
+        ">-3</button>
+        <button onclick="quantity--;
+        console.log(`Cart Quantity : ${quantity}`);
+        ">Remove From Cart</button>
+        <button onclick="quantity=0;
+        console.log(`Cart Quantity : ${quantity}`);
+        ">Reset Cart</button> -->
+        <button onclick="
+        calc+='1'
+        console.log(calc);">1</button>
+        <button onclick="
+        calc+='2'
+        console.log(calc);">2</button>
+        <button onclick="
+        calc+='3'
+        console.log(calc);">3</button>
+        <button onclick="
+        calc+=' + '
+        console.log(calc);">+</button>
+        <button onclick="
+        console.log(eval(calc));">=</button>
+    </div>
+    <script>
+        // Practice 
+        // 1
+        // let name = "Surya Sekhar Sharma";
+        // console.log(`My name is : ${name}`);
+
+        // 2
+        // let cost = 5+(2*3)+9;
+        // console.log(`Cost of food : $${cost}`);
+        // let tax=cost*0.1;
+        // console.log(`Tax (10%) : $${tax}`);
+        // let totalCost= cost + tax;
+        // console.log(`Total cost : $${totalCost}`);
+
+        // 3
+        // let quantity = 0;
+        //  calculator
+        let calc="";
+    </script>
+</body>
+
+</html>

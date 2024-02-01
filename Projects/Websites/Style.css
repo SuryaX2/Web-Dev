@@ -1,0 +1,164 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial;
+    color: white;
+}
+
+body {
+    height: 100vh; */
+    background-image: url('https://images5.alphacoders.com/133/1339874.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+header {
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    backdrop-filter: blur(5px);
+    box-sizing: border-box;
+    box-shadow: 4px 2px 20px 2px rgba(206, 67, 153, 0.692);
+    border: none;
+}
+
+header nav ul {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+header nav ul li {
+    list-style: none;
+    font-size: large;
+    font-weight: 600;
+}
+.home{
+    animation: slide 0.6s ease-in-out 1 ;
+}
+.services{
+    animation: slide 0.6s ease-in-out 0.1s 1 ;
+}
+.contacts{
+    animation: slide 0.6s ease-in-out 0.2s 1 ;
+}
+.about{
+    animation: slide 0.6s ease-in-out 0.3s 1 ;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+}
+
+.container-elements {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid rgba(255, 255, 255, 0.295);
+    padding: 25px;
+    width: 23vw;
+    font-weight: bold;
+    border-radius: 1.5vw;
+    backdrop-filter: blur(5px);
+    color: white;
+    animation: UpDown 0.6s ease-in-out 1 alternate;
+}
+
+h1 {
+    animation: UpDown 0.6s ease-in-out 1 alternate;
+}
+
+.box {
+    padding: 10px 0px;
+    font-weight: bold;
+    animation: UpDown 0.6s ease-in-out 1 alternate;
+}
+
+.input {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 15px;
+}
+
+.input input {
+    border: none;
+    border-bottom: 3px solid white;
+    border-bottom-right-radius: 20px;
+    margin-top: 10px;
+    width: 20vw;
+    outline: none;
+    background-color: transparent;
+}
+
+.input input::placeholder {
+    color: white;
+}
+
+.log {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    line-height: 30px;
+    animation: UpDown 0.6s ease-in-out 1 alternate;
+}
+
+.log a {
+    color: wheat;
+    margin: 6px;
+}
+
+.log label,
+.log input {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+}
+
+.log .login {
+    padding: 10px 0px;
+    width: 20vw;
+    border: none;
+    border-radius: 10vw;
+    background: linear-gradient(156deg, rgba(131, 58, 180, 0.63) 0%, rgba(253, 29, 29, 0.63) 79%, rgba(252, 176, 69, 0.63) 100%);
+    cursor: pointer;
+    font-weight: bold;
+    animation: UpDown 0.6s ease-in-out 1 alternate;
+}
+
+.log .login:hover {
+    background: linear-gradient(156deg, rgba(131, 58, 180, 1) 0%, rgba(253, 29, 29, 1) 79%, rgba(252, 176, 69, 1) 100%);
+}
+
+@keyframes UpDown {
+    0% {
+        transform: translateY(50px);
+        opacity: 0%;
+    }
+
+    100% {
+        transform: translateY(0px);
+        opacity: 100%;
+    }
+}
+@keyframes slide{
+    0% {
+        transform: translateX(20vw);
+        opacity: 0%;
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 100%;
+    }
+} 

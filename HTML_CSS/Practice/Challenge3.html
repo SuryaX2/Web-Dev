@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+    </style>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        nav {
+            background-color: darkblue;
+            color: white;
+        }
+
+        header {
+            position: sticky;
+            top: 0;
+            left: 0;
+
+        }
+
+        ul li {
+            display: inline-block;
+            padding: 20px;
+
+        }
+
+        /* header::before {
+            content: "";
+            position: absolute;
+            background-color: rgb(141, 141, 255);
+            height: 80vh;
+            width: 98.9vw;
+            z-index: -1;
+        } */
+
+        .boxes {
+            height: 65.5vh;
+            padding: 20px;
+            background-color: rgb(141, 141, 255);
+            margin: 10px;
+        }
+
+        .box {
+            border: 2px solid red;
+            display: inline-block;
+            width: 450px;
+            height: 450px;
+        }
+
+        .box1 {
+            background-color: yellow;
+            margin-left: 150px;
+            margin-top: 10px;
+        }
+
+        .box2 {
+            float: right;
+            background-color: yellow;
+            margin-right: 150px;
+            margin-top: 10px;
+
+        }
+
+        .tittle {
+            border: 2px solid black;
+            margin: 50px auto;
+            height: 310px;
+            width: 1325px;
+            border-radius: 60px;
+            text-align: center;
+            font-size: 72px;
+        }
+
+        .logo {
+            border: 2px solid black;
+            float: right;
+            position: fixed;
+            bottom: 0;
+            right: 0;
+            border-radius: 90px;
+        }
+
+        img {
+            width: 100px;
+            border-radius: 90px;
+        }
+
+        footer {
+            background-color: greenyellow;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li>Home</li>
+                <li>Service</li>
+                <li>About</li>
+                <li>Contact Us</li>
+            </ul>
+        </nav>
+    </header>
+    <section>
+        <div class="boxes">
+            <div class="box box1">BOX 1</div>
+            <div class="box box2">BOX 2</div>
+        </div>
+    </section>
+    <div class="tittle">
+        Welcome To This Website This Layout is created by Surya Sekhar Sharma
+    </div>
+    <div class="logo">
+        <img src="https://bcassetcdn.com/public/blog/wp-content/uploads/2021/11/10192901/anime-fandub-project-logo-by-nikita-zadvornijs-dribbble.png"
+            alt="">
+    </div>
+    <footer>This The FOOTER</footer>
+</body>
+
+</html>

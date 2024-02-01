@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms</title>
+</head>
+
+<body>
+    <h2>HTML Forms</h2>
+    <form action="wow.js">
+        <label for="name">Name : </label>
+        <div><input type="text" name="myName" id="name"></div>
+        <br>
+        <label for="role">Role : </label>
+        <div><input type="text" name="myRole" id="role"></div>
+        <br>
+        <label for="mail">Email Address : </label>
+        <div><input type="email" name="myEmail" id="mail"></div>
+        <br>
+        <label for="date">Date : </label>
+        <div><input type="date" name="myName" id="date"></div>
+        <br>
+        <label for="eligible">Are You Eligible ? : </label>
+        <div>If Yes tick the Box <input type="checkbox" name="myEligibility" id="eligible"></div>
+        <br>
+        <label for="gender">Gender : </label>
+        <div>
+            Male <input type="radio" name="myGender" id="gender">
+            Female <input type="radio" name="myGender" id="gender">
+            Others <input type="radio" name="myGender" id="gender">
+            Prefer Not to say <input type="radio" name="myGender" id="gender">
+        </div>
+        <br>
+        <label for="yourself">Write About Yourself : </label>
+        <div>
+            <textarea name="myYourself" id="yourself" cols="30" rows="10"></textarea>
+        </div>
+        <br>
+        <label for="Education">Last Passed Examination / Qualification : </label>
+        <div><select name="myEducation" id="Education">
+                <option value="8">Class 8</option>
+                <option value="9">Class 9</option>
+                <option value="10">Class 10</option>
+                <option value="11">Class 11</option>
+                <option value="12">Class 12</option>
+            </select></div>
+        <br>
+        <div>
+            <input type="submit" value="Submit Now">
+            <input type="reset" value="Reset 🔁">
+        </div>
+    </form>
+</body>
+
+</html>

@@ -7,7 +7,7 @@ function tap(number) {
             calc += number;
         document.querySelector('.display').value = calc;
     } catch (error) {
-        document.querySelector('.display').value = 'Error';
+        document.querySelector('.display').value = 'Syntax Error';
     }
 }
 

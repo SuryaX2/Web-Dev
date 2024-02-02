@@ -6,6 +6,7 @@ function tap(number) {
         calc += number;
     document.querySelector('.display-para').innerHTML = calc;
 }
+
 function clearDisplay() {
     document.querySelector('.display-para').innerHTML = 'Calculator';
 }

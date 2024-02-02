@@ -1,12 +1,17 @@
 let calc = '';
 function tap(number) {
-    if (number === '=')
-        calc = eval(calc);
-    else
-        calc += number;
-    document.querySelector('.display-para').innerHTML = calc;
+    try {
+        if (number === '=')
+            calc = eval(calc);
+        else
+            calc += number;
+        document.querySelector('.display').value = calc;
+    } catch (error) {
+        document.querySelector('.display').value = 'Error';
+    }
 }
 
 function clearDisplay() {
-    document.querySelector('.display-para').innerHTML = 'Calculator';
+    calc = '';
+    document.querySelector('.display').value = calc;
 }

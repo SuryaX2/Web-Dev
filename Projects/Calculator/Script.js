@@ -1,3 +1,4 @@
+let n = '';
 let calc = '';
 function tap(number) {
     try {
@@ -15,3 +16,26 @@ function clearDisplay() {
     calc = '';
     document.querySelector('.display').value = calc;
 }
+function containsNumber(str) {
+    return /\d/.test(str);
+  }
+document.addEventListener('keydown', (e) => {
+    console.log(e);
+    if (e.key === 'Enter')
+        tap('=');
+    else if (e.key === '*')
+        tap('*');
+    else if (e.key === '/')
+        tap('/');
+    else if (e.key === '+')
+        tap('+');
+    else if (e.key === '-')
+        tap('-');
+    else if (e.key === 'c')
+        clearDisplay();
+    else {
+        n = e.key;
+        if (containsNumber(n))
+            tap(`${n}`);
+    }
+});

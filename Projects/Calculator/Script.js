@@ -1,5 +1,6 @@
 let n = '';
 let calc = '';
+
 function tap(number) {
     try {
         if (number === '=')
@@ -16,11 +17,12 @@ function clearDisplay() {
     calc = '';
     document.querySelector('.display').value = calc;
 }
+
 function containsNumber(str) {
     return /\d/.test(str);
-  }
+}
+
 document.addEventListener('keydown', (e) => {
-    console.log(e);
     if (e.key === 'Enter')
         tap('=');
     else if (e.key === '*')

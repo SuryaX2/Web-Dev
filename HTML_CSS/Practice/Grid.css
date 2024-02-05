@@ -17,13 +17,15 @@ body {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     place-items: center;
+    background-color: rgb(31, 31, 31);
 }
 
 .cont {
     height: auto;
     width: 20vw;
     padding: 20px;
-    background-color: black;
+    background-color: rgb(31, 31, 31);
+    border-radius: 35px;
 }
 
 
@@ -41,7 +43,7 @@ body {
 
 .ac {
     grid-column-start: span 3;
-    width: 100%;
+    width: 95%;
 }
 
 .gray-button {
@@ -72,9 +74,24 @@ body {
     color: white;
 }
 
-input {
-    width: 20vw;
-    background-color: black;
+.display {
+    grid-column-start: span 4;
+    grid-row-start: span 2;
+    font-size: 26px;
+    text-align: right;
+    height: 100%;
+    width: 100%;
+    color: white;
+    font-size: 45px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background-color: rgb(31, 31, 31);
     border: none;
+    border-bottom: 2px solid rgb(51, 51, 51);
     outline: none;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
 }

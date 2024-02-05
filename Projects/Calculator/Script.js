@@ -12,7 +12,10 @@ function tap(number) {
         document.querySelector('.display').value = 'Syntax Error';
     }
 }
-
+function backSpace() {
+    calc = calc.slice(0, -1);
+    document.querySelector('.display').value = calc;
+}
 function clearDisplay() {
     calc = '';
     document.querySelector('.display').value = calc;

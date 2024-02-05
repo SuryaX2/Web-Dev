@@ -6,7 +6,7 @@
 body {
     display: flex;
     height: 100vh;
-    background-color: rgba(95, 158, 160, 0.701);
+    background-color: rgb(210, 225, 238);
     justify-content: center;
     align-items: center;
 }
@@ -41,7 +41,7 @@ body {
     text-align: center;
 }
 
-.ac {
+.all-clr {
     grid-column-start: span 3;
     width: 95%;
 }

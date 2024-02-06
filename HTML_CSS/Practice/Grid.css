@@ -12,10 +12,11 @@ body {
 }
 
 .container-grid {
-    height: 90%;
+    height: 80%;
     width: 100%;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 1fr);
     place-items: center;
     background-color: rgb(31, 31, 31);
 }

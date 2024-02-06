@@ -94,5 +94,6 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-wrap: wrap;
+    word-wrap: break-word;
+    word-break: break-all;
 }

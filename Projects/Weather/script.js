@@ -5,7 +5,7 @@ const weatherIcon = document.querySelector('.weather-icon');
 
 async function check(city) {
     const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`);
-    
+
     if (response.status == 404) {
         document.querySelector('.e-cont').style.display = "block";
         document.querySelector('.e-cont').classList.add('ani');
@@ -38,9 +38,12 @@ async function check(city) {
 
         document.querySelector('.container').classList.add('ani');
         document.querySelector('.weather').classList.add('ani');
+
+        setTimeout(() => {
+            document.querySelector('.weather').classList.remove('ani');
+        }, 1000);
     }
 }
-
 searchBtn.addEventListener('click', () => {
     console.log(searchBar.value);
     check(searchBar.value);

@@ -5,6 +5,7 @@
     margin: 0;
     padding: 0;
     font-family: 'Poppins', sans-serif;
+    font-weight: bold;
     box-sizing: border-box;
 }
 
@@ -28,7 +29,7 @@ body {
     border-radius: 50px 0px 50px 0px;
     text-align: center;
     box-shadow: 2px 2px 9px 0px #e55f5f;
-    box-shadow: 10px 10px 200px 9px rgb(254, 182, 182);
+    box-shadow: 10px 10px 200px 9px rgba(254, 182, 182, 0.612);
     position: relative;
 }
 
@@ -36,9 +37,9 @@ body {
     content: "";
     background-image: url('https://i.pinimg.com/564x/39/53/6c/39536c711645d888b7fe2f5ee2f8fc11.jpg');
     background-size: cover;
-    border-radius: 50px 0px 50px 0px;
     background-repeat: no-repeat;
     background-position: 25%;
+    border-radius: 50px 0px 50px 0px;
     position: absolute;
     top: 0px;
     right: 0px;

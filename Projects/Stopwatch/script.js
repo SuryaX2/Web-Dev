@@ -20,39 +20,43 @@ function update() {
     let min = m < 10 ? "0" + m : m;
     let sec = s < 10 ? "0" + s : s;
     display.innerHTML = `${hours} : ${min} : ${sec}`;
-};
+}
 
 function playWatch() {
     if (!running) {
         timer = setInterval(update, 1000);
         running = true;
         document.querySelector('.playimg').src = "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Eo_circle_deep-orange_pause.svg/480px-Eo_circle_deep-orange_pause.svg.png";
+        document.querySelector('.playimg').style.opacity = "0.8";
     }
     else {
         clearInterval(timer);
         running = false;
         document.querySelector('.playimg').src = "https://static.vecteezy.com/system/resources/previews/009/992/418/non_2x/button-video-player-icon-sign-design-free-png.png";
+        document.querySelector('.playimg').style.opacity = "1";
     }
-};
+}
 
 function timerStop() {
     clearInterval(timer);
     running = false;
-};
+}
 
 function resetTimer() {
     timerStop();
     h = m = s = 0;
     display.innerHTML = `${h} : ${m} : ${s}`;
-};
+}
 
 playBtn.addEventListener('click', () => {
     playWatch();
 });
+
 stopBtn.addEventListener('click', () => {
     console.log('clicked');
     timerStop();
 });
+
 resetBtn.addEventListener('click', () => {
     resetTimer();
 });

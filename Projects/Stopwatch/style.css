@@ -79,6 +79,10 @@ body {
     z-index: 1;
 }
 
+.btns button {
+    cursor: pointer;
+}
+
 .btns .play {
     transform: scale(1.7);
 }

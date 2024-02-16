@@ -40,12 +40,13 @@ function playWatch() {
 function timerStop() {
     clearInterval(timer);
     running = false;
+    document.querySelector('.playimg').src = "https://static.vecteezy.com/system/resources/previews/009/992/418/non_2x/button-video-player-icon-sign-design-free-png.png";
 }
 
 function resetTimer() {
     timerStop();
     h = m = s = 0;
-    display.innerHTML = `${h} : ${m} : ${s}`;
+    display.innerHTML = `00 : 00 : 00`;
 }
 
 playBtn.addEventListener('click', () => {
@@ -53,7 +54,6 @@ playBtn.addEventListener('click', () => {
 });
 
 stopBtn.addEventListener('click', () => {
-    console.log('clicked');
     timerStop();
 });
 

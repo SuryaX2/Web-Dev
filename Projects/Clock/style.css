@@ -14,7 +14,7 @@ body {
 }
 
 .container {
-    height: 240px;
+    height: auto;
     width: 600px;
     border: none;
     outline: none;
@@ -26,6 +26,7 @@ body {
     align-items: center;
     flex-direction: column;
     border: 2px solid white;
+    position: absolute;
 }
 
 h1 {
@@ -47,7 +48,7 @@ h1 {
     background: linear-gradient(180deg, #efd5ff 0%, #515ada 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    bottom: 185px;
+    bottom: 175px;
     left: 270px;
 }
 

@@ -56,11 +56,11 @@ body {
     border: 3px solid yellow;
     cursor: pointer;
     background-color: transparent;
-    transition: all 0.7s;
+    transition: all 0.4s;
 }
 
 .reset:hover,
 .auto:hover {
     background-color: rgba(255, 255, 255, 0.119);
-    transform: translateY(-10px);
+    box-shadow: 1px 1px 20px 2px grey;
 }

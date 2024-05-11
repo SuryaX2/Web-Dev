@@ -9,9 +9,10 @@ function App() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    axios.post('http://localhost:4000/register',{name, email,password})
-    .then(result=>console.log(result))
-    .catch(err=>console.log(err))
+    axios.post('http://localhost:4000/register', { name, email, password })
+      .then(result => console.log(result))
+      .catch(err => console.log(err))
+    handleReset();
   };
 
   const handleReset = () => {

@@ -1,5 +1,6 @@
 //const { type } = require('@testing-library/user-event/dist/type')
-const mongoose = require('mongoose');
+// const mongoose = require('mongoose');
+import mongoose from 'mongoose';
 const { Schema } = mongoose;
 
 const UserSchema = new Schema({
@@ -19,5 +20,6 @@ const UserSchema = new Schema({
     }
 })
 const User = mongoose.model('User', UserSchema);
-User.createIndexes();
-module.exports = User;
+export default User;
+// User.createIndexes();
+// module.exports = User;

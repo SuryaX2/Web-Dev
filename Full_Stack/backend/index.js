@@ -1,8 +1,13 @@
-const connectToMongo = require("./db")
-const express = require('express')
-const cors = require('cors')
-const User = require('./models/Node');
-const port = 4000;
+// const connectToMongo = require("./db")
+// const express = require('express')
+// const cors = require('cors')
+// const User = require('./models/Node');
+
+import connectToMongo from "./db.js";
+import express from 'express';
+import cors from 'cors';
+import User from "./models/Node.js"
+const PORT = 4000;
 
 connectToMongo()
 const app = express()
@@ -15,6 +20,6 @@ app.post('/register', (req, res) => {
         .catch(err => res.json(err))
 })
 
-app.listen(port, () => {
+app.listen(PORT, () => {
     console.log("server is ready")
 })

@@ -6,7 +6,6 @@ import Login from './login'
 import Home from './home'
 import Logout from './logout'
 import Alert from './alert';
-import Forgot from './forgot';
 
 
 function App() {
@@ -30,7 +29,6 @@ function App() {
           <Route path="/login" element={<Login showAlert={showAlert} />}></Route>
           <Route path="/home" element={<Home />}></Route>
           <Route path="/logout" element={<Logout />}></Route>
-          <Route path="/forgot" element={<Forgot showAlert={showAlert} />}></Route>
         </Routes>
       </BrowserRouter>
     </>

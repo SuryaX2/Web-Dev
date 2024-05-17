@@ -1,5 +1,5 @@
-import { useState } from "react";
-
+// import { useState } from "react";
+import React from "react";
 function logout() {
     return (
         <h2>Logout</h2>

@@ -26,31 +26,48 @@ app.post('/login', (req, res) => {
         .then(user => {
             if (user) {
                 if (user.password === password) {
-                    res.json("Success")
+                    res.json("Success");
+                } else {
+                    res.status(401).json("Wrong password");
                 }
-                else {
-                    res.json("wrong password")
-                }
+            } else {
+                res.status(404).json("User not found");
             }
-        }).catch(err => console.log(`Error Occured`)
-})
+        })
+        .catch(err => {
+            console.error(`Error occurred: ${err}`);
+            res.status(500).json("Internal server error");
+        });
+});
+
 
 app.post('/forgot', (req, res) => {
     const { id } = req.params;
     const { email, npassword } = req.body;
+
     User.findOne({ email: email })
         .then(user => {
             if (user) {
-                if (user.password != npassword) {
-                    User.findByIdAndUpdate({ _id: id }, { password: npassword })
-                        .then(e => res.json("Success"))
+                if (user.password !== npassword) {
+                    User.findByIdAndUpdate(id, { password: npassword })
+                        .then(() => res.json("Success"))
+                        .catch(err => {
+                            console.error(`Error occurred during password update: ${err}`);
+                            res.status(500).json("Internal server error");
+                        });
+                } else {
+                    res.status(400).json("New password must be different from the old password");
                 }
-                else {
-                    res.json("fail")
-                }
+            } else {
+                res.status(404).json("User not found");
             }
-        }).catch(err => console.log(`Error Occured`)
-})
+        })
+        .catch(err => {
+            console.error(`Error occurred: ${err}`);
+            res.status(500).json("Internal server error");
+        });
+});
+
 
 app.listen(PORT, () => {
     console.log("server is ready")

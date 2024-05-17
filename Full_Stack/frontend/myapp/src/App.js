@@ -1,58 +1,39 @@
-import React, { useState } from 'react';
+import { useState } from 'react'
 import './App.css';
-import axios from 'axios';
+import Signup from './signup'
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Login from './login'
+import Home from './home'
+import Logout from './logout'
+import Alert from './alert';
+import Forgot from './forgot';
+
 
 function App() {
-  const [name, setName] = useState('');
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    axios.post('http://localhost:4000/register', { name, email, password })
-      .then(result => console.log(result))
-      .catch(err => console.log(err))
-    handleReset();
-  };
-
-  const handleReset = () => {
-    setName('');
-    setEmail('');
-    setPassword('');
-  };
-
+  const [alert, setAlert] = useState(null);
+  const showAlert = (message, type) => {
+    setAlert({
+      msg: message,
+      type: type
+    })
+    setTimeout(() => {
+      setAlert(null);
+    }, 10000);
+  }
   return (
-    <div className="app-container">
-      <h1>Registration Form</h1>
-      <form onSubmit={handleSubmit} className="form-container">
-        <input
-          type="text"
-          placeholder="Name"
-          value={name}
-          onChange={(e) => setName(e.target.value)}
-        />
-        <input
-          type="email"
-          placeholder="Email"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-        />
-        <input
-          type="password"
-          placeholder="Password"
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
-        />
-        <div>
-          <button type="button" onClick={handleReset} className="reset-btn">
-            Reset
-          </button>
-          <button type="submit" className="submit-btn">
-            Submit
-          </button>
-        </div>
-      </form>
-    </div>
+    <>
+      <BrowserRouter>
+        <Alert alert={alert} />
+        <Routes>
+
+          <Route path="/register" element={<Signup showAlert={showAlert} />}></Route>
+          <Route path="/login" element={<Login showAlert={showAlert} />}></Route>
+          <Route path="/home" element={<Home />}></Route>
+          <Route path="/logout" element={<Logout />}></Route>
+          <Route path="/forgot" element={<Forgot showAlert={showAlert} />}></Route>
+        </Routes>
+      </BrowserRouter>
+    </>
   );
 }
 

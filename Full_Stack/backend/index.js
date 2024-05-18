@@ -104,6 +104,6 @@ app.put('/forgot',(req,res) =>{
   }).catch(err=> console.log(`Error Occured`))
 })
 
-app.listen(3001,()=>{
+app.listen(PORT,()=>{
   console.log("server is ready")
 })

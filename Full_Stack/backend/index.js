@@ -1,8 +1,3 @@
-// const connectToMongo = require("./db")
-// const express = require('express')
-// const cors = require('cors')
-// const User = require('./models/Node');
-
 import connectToMongo from "./db.js";
 import express from 'express';
 import cors from 'cors';

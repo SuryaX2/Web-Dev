@@ -7,7 +7,7 @@ import b1 from "bcryptjs";
 import jwt from "jsonwebtoken";
 const PORT = 3001;
 
-connectToMongo()
+connectToMongo();
 const app = express()
 app.use(express.json())
 app.use(cors())

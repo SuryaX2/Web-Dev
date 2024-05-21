@@ -93,7 +93,7 @@ app.post('/forgot', (req, res) => {
                     res.json("fail")
                 }
             }
-        }).catch(err => console.log(Error Occured))
+        }).catch(err => console.log(`Error Occured`))
 })
 
 app.get("/fetch-detail", async (req, res) => {

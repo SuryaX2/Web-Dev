@@ -3,19 +3,42 @@
 /* Table styles */
 table {
   width: 500px;
-  border-spacing: 0 10px; /* Add spacing between rows */
+  border-collapse: collapse;
+  margin: 0 auto; /* Center the table */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add box shadow */
+}
+
+thead {
+  background-color: #f2f2f2; /* Add background color for thead */
 }
 
 thead tr th {
   text-align: center;
+  padding: 10px; /* Add padding */
 }
 
 tbody tr {
-  margin-bottom: 10px; /* Add margin below each row */
+  border-bottom: 1px solid #ddd; /* Add border bottom for tbody */
+}
+
+tbody tr:last-child {
+  border-bottom: none; /* Remove border bottom for last row */
+}
+
+tbody tr td {
+  padding: 10px; /* Add padding */
 }
 
 /* Button styles */
 button {
   background-color: blue;
   color: white;
+  padding: 8px 16px; /* Add padding */
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3; /* Darker blue on hover */
 }

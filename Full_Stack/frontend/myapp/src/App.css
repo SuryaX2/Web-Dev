@@ -3,6 +3,7 @@
 /* Table styles */
 table {
   width: 500px;
+  border-spacing: 0 10px; /* Add spacing between rows */
 }
 
 thead tr th {
@@ -10,7 +11,7 @@ thead tr th {
 }
 
 tbody tr {
-  margin: 10px 0;
+  margin-bottom: 10px; /* Add margin below each row */
 }
 
 /* Button styles */

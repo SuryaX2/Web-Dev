@@ -16,7 +16,7 @@ function Home() {
 
     const deleteUser = (id, name) => {
         console.log("Deleting");
-        if (window.confirm(`Are you sure you to delete ${ name }`)) {
+        if (window.confirm(`Are you sure you to delete ${name}`)) {
             axios.post('http://localhost:3001/deleteuser', { id })
                 .then((res) => {
                     console.log(res.data);

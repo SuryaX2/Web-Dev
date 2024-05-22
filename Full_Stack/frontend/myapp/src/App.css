@@ -12,7 +12,6 @@
 /* Style the table container */
 .table-container {
   overflow-x: auto;
-  /* Enable horizontal scroll if content overflows */
 }
 table {
   width: 100%;

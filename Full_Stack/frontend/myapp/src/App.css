@@ -34,7 +34,6 @@ th {
 td {
   padding: 10px;
   border-bottom: 1px solid #ddd;
-  /* Add bottom border to all rows */
 }
 tr:nth-child(even) {
   background-color: #f2f2f2;

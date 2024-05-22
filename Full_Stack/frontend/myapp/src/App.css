@@ -20,7 +20,6 @@ table {
   width: 100%;
   /* Make table width relative to data */
   border-collapse: collapse;
-  /* Remove space between cells */
 }
 th {
   padding: 10px;

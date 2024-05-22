@@ -36,7 +36,6 @@ td {
   border-bottom: 1px solid #ddd;
   /* Add bottom border to all rows */
 }
-/* Style the divider between rows (optional) */
 tr:nth-child(even) {
   background-color: #f2f2f2;
 }

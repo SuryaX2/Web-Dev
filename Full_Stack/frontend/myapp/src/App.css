@@ -5,18 +5,22 @@
   box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
   padding: 20px;
   margin: 0 auto;
-  width: fit-content; /* Adjust width based on data */
+  width: fit-content;
+  /* Adjust width based on data */
 }
 
 /* Style the table container */
 .table-container {
-  overflow-x: auto; /* Enable horizontal scroll if content overflows */
+  overflow-x: auto;
+  /* Enable horizontal scroll if content overflows */
 }
 
 /* Style the table */
 table {
-  width: 100%; /* Make table width relative to data */
-  border-collapse: collapse; /* Remove space between cells */
+  width: 100%;
+  /* Make table width relative to data */
+  border-collapse: collapse;
+  /* Remove space between cells */
 }
 
 /* Style the table header */
@@ -29,7 +33,8 @@ th {
 /* Style the table body */
 td {
   padding: 10px;
-  border-bottom: 1px solid #ddd; /* Add bottom border to all rows */
+  border-bottom: 1px solid #ddd;
+  /* Add bottom border to all rows */
 }
 
 /* Style the divider between rows (optional) */

@@ -1,99 +1,53 @@
-/* General styles for the body */
-body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #f0f2f5;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-}
-
-/* Container for the card body */
+/* Style the entire card body */
 .card-body {
   background-color: #fff;
-  border-radius: 12px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  margin: 20px;
-  padding: 30px;
-  max-width: 800px;
-  width: 100%;
-  box-sizing: border-box;
+  border-radius: 5px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin: 0 auto;
+  width: fit-content; /* Adjust width based on data */
 }
 
-/* Heading style */
-h2 {
-  color: #333;
-  text-align: center;
-  margin-bottom: 20px;
+/* Style the table container */
+.table-container {
+  overflow-x: auto; /* Enable horizontal scroll if content overflows */
 }
 
-/* Table styles */
+/* Style the table */
 table {
-  width: 100%;
-  border-collapse: collapse;
-  margin-top: 20px;
+  width: 100%; /* Make table width relative to data */
+  border-collapse: collapse; /* Remove space between cells */
 }
 
-th,
-td {
-  padding: 16px;
+/* Style the table header */
+th {
+  padding: 10px;
   text-align: left;
   border-bottom: 1px solid #ddd;
 }
 
-th {
-  background-color: #f7f7f7;
-  font-weight: 600;
-  text-transform: uppercase;
+/* Style the table body */
+td {
+  padding: 10px;
+  border-bottom: 1px solid #ddd; /* Add bottom border to all rows */
 }
 
-tr:hover {
-  background-color: #f1f1f1;
+/* Style the divider between rows (optional) */
+tr:nth-child(even) {
+  background-color: #f2f2f2;
 }
 
-tbody tr:nth-child(even) {
-  background-color: #fafafa;
-}
-
-/* Button styles */
+/* Style the button */
 button {
-  background-color: #e74c3c;
-  color: white;
+  background-color: #2196f3;
+  color: #fff;
   border: none;
-  padding: 10px 20px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 14px;
-  margin: 4px 2px;
+  padding: 5px 10px;
+  border-radius: 3px;
   cursor: pointer;
-  border-radius: 4px;
-  transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
+/* Style the button on hover */
 button:hover {
-  background-color: #c0392b;
-  transform: translateY(-2px);
-}
-
-/* Additional styles for better layout */
-thead {
-  background-color: #f9f9f9;
-}
-
-table th,
-table td {
-  text-align: center;
-}
-
-table th:first-child,
-table td:first-child {
-  text-align: left;
-}
-
-table th:last-child,
-table td:last-child {
-  text-align: right;
+  background-color: #177dff;
 }

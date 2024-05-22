@@ -22,8 +22,6 @@ table {
   border-collapse: collapse;
   /* Remove space between cells */
 }
-
-/* Style the table header */
 th {
   padding: 10px;
   text-align: left;

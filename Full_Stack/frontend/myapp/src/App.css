@@ -8,8 +8,6 @@
   width: fit-content;
   /* Adjust width based on data */
 }
-
-/* Style the table container */
 .table-container {
   overflow-x: auto;
 }

@@ -14,8 +14,6 @@
   overflow-x: auto;
   /* Enable horizontal scroll if content overflows */
 }
-
-/* Style the table */
 table {
   width: 100%;
   border-collapse: collapse;

@@ -56,4 +56,6 @@ button {
 button:hover {
   background-color: #177dff;
 }
-h2
+h2{
+  text-align: center;
+}

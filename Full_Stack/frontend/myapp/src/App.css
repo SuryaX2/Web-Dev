@@ -18,7 +18,6 @@
 /* Style the table */
 table {
   width: 100%;
-  /* Make table width relative to data */
   border-collapse: collapse;
 }
 th {

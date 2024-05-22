@@ -6,7 +6,6 @@
   padding: 20px;
   margin: 0 auto;
   width: fit-content;
-  /* Adjust width based on data */
 }
 .table-container {
   overflow-x: auto;

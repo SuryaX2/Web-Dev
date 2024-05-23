@@ -9,7 +9,7 @@ const PORT = 3001;
 
 connectToMongo();
 const app = express();
-app.use(express.json())
+app.use(express.json());
 app.use(cors())
 
 app.post('/register', async (req, res) => {

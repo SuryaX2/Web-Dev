@@ -8,7 +8,7 @@ import jwt from "jsonwebtoken";
 const PORT = 3001;
 
 connectToMongo();
-const app = express()
+const app = express();
 app.use(express.json())
 app.use(cors())
 

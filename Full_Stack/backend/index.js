@@ -123,7 +123,8 @@ app.post('/updateuser', async (req, res) => {
         await User.findByIdAndUpdate(_id, { name, email });
         res.json({ x: 'Update' });
     } catch (err) {
-        res.status(500).send(err);
+        console.error('Error updating user:', err);
+        res.status(500).send('Internal Server Error');
     }
 });
 

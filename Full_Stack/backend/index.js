@@ -121,9 +121,9 @@ app.post('/updateuser', async (req, res) => {
     const { _id, name, email } = req.body;
     try {
         await User.findByIdAndUpdate(_id, { name, email });
-        res.send({ x: "Update" });
-    } catch (error) {
-        res.status(500).send({ error: 'Failed to update user' });
+        res.json({ x: 'Update' });
+    } catch (err) {
+        res.status(500).send(err);
     }
 });
 

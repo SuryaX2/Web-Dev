@@ -116,7 +116,7 @@ app.post("/deleteuser", async (req, res) => {
     } catch (err) {
         console.log(err);
     }
-})
+});
 app.post('/updateuser', async (req, res) => {
     const { _id, name, email } = req.body;
     try {

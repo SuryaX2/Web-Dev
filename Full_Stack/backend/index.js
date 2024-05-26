@@ -129,5 +129,5 @@ app.post('/updateuser', async (req, res) => {
 });
 
 app.listen(PORT, () => {
-    console.log("server is ready")
+    console.log("server is ready");
 })

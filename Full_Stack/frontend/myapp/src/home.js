@@ -10,46 +10,46 @@ function Home() {
         fetch("http://localhost:3001/fetch-detail", {
             method: "GET"
         })
-        .then((res) => res.json())
-        .then((data) => {
-            console.log(data, "userData");
-            setData(data.data);
-        })
+            .then((res) => res.json())
+            .then((data) => {
+                console.log(data, "userData");
+                setData(data.data);
+            })
     }, []);
 
     const deleteUser = (id, name) => {
         console.log("Deleting");
         if (window.confirm(`Are you sure you want to delete ${name}?`)) {
             axios.post('http://localhost:3001/deleteuser', { id })
-            .then((res) => {
-                console.log(res.data);
-                if (res.data.x === "Delete") {
-                    alert("Deleted Successfully");
-                    window.location.reload();
-                }
-            })
-            .catch((err) => {
-                console.error("Error deleting user:", err);
-                alert("Error deleting user");
-            });
+                .then((res) => {
+                    console.log(res.data);
+                    if (res.data.x === "Delete") {
+                        alert("Deleted Successfully");
+                        window.location.reload();
+                    }
+                })
+                .catch((err) => {
+                    console.error("Error deleting user:", err);
+                    alert("Error deleting user");
+                });
         }
     };
 
     const updateUser = () => {
         console.log("Updating user:", editUser);
         axios.post('http://localhost:3001/updateuser', editUser)
-        .then((res) => {
-            console.log(res.data);
-            if (res.data.x === "Update") {
-                alert("Updated Successfully");
-                setIsEditing(false);
-                window.location.reload();
-            }
-        })
-        .catch((err) => {
-            console.error("Error updating user:", err);
-            alert("Error updating user");
-        });
+            .then((res) => {
+                console.log(res.data);
+                if (res.data.x === "Update") {
+                    alert("Updated Successfully");
+                    setIsEditing(false);
+                    window.location.reload();
+                }
+            })
+            .catch((err) => {
+                console.error("Error updating user:", err);
+                alert("Error updating user");
+            });
     };
 
     const handleEditClick = (user) => {

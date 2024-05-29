@@ -20,7 +20,7 @@ app.post('/register', async (req, res) => {
     try {
         let user = await User.findOne({ email: req.body.email });
         if (user) {
-            return res.status(404).json({ error: "user already exits" })
+            return res.status(404).json({ error: "user already exits" });
         }
         const salt = await b1.genSalt(6);
         const spass = await b1.hash(req.body.password, salt);

@@ -1,4 +1,4 @@
-import connectToMongo from "./db.js";
+import connectToMongo from "./db.js"
 import express from 'express';
 import cors from 'cors';
 import User from "./models/Node.js";

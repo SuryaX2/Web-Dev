@@ -1,6 +1,6 @@
 import connectToMongo from "./db.js"
 import express from 'express'
-import cors from 'cors';
+import cors from 'cors'
 import User from "./models/Node.js";
 import { body, validationResult } from "express-validator";
 import b1 from "bcryptjs";

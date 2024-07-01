@@ -3,9 +3,9 @@ import express from 'express'
 import cors from 'cors'
 import User from "./models/Node.js"
 import { body, validationResult } from "express-validator"
-import b1 from "bcryptjs"
-import jwt from "jsonwebtoken"
-const PORT = 3001
+import b1 from "bcryptjs";
+import jwt from "jsonwebtoken";
+const PORT = 3001;
 
 connectToMongo();
 const app = express();

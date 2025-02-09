@@ -38,7 +38,7 @@
 
         .logo img {
             height: 31px;
-            width: 103px; 
+            width: 103px;
             cursor: pointer;
             margin-top: 19px;
         }
@@ -87,6 +87,7 @@
             border-color: #FCD200;
             height: 32px;
             border: none;
+            cursor: pointer;
         }
 
         .terms {
@@ -178,18 +179,20 @@
         <img src="https://pngimg.com/d/amazon_PNG8.png" alt="Amazon_logo">
     </div>
     <section class="login">
-        <div class="signin">
-            <h1>Sign in</h1>
-            <section id="email-box">
-                <label for="form-email">Email or mobile phone number</label>
-                <input type="email" name="" id="form-email">
-            </section>
-            <section id="pass-box">
-                <label for="form-email" id="email-box">Password</label>
-                <input type="password" name="" id="form-email">
-            </section>
-            <button class="btn-sign">Sign in</button>
-        </div>
+        <form>
+            <div class="signin">
+                <h1>Sign in</h1>
+                <section id="email-box">
+                    <label for="form-email">Email or mobile phone number</label>
+                    <input type="email" name="" id="form-email" required>
+                </section>
+                <section id="pass-box">
+                    <label for="form-email" id="email-box">Password</label>
+                    <input type="password" name="" id="form-email" required>
+                </section>
+                <button class="btn-sign" type="submit">Sign in</button>
+            </div>
+        </form>
         <div class="terms">
             <p>By continuing, you agree to <a
                     href="https://www.amazon.in/gp/help/customer/display.html/ref=ap_signin_notification_condition_of_use?nodeId=GLSBYFE9MGKKQXXM&ie=UTF8&ref_=ap_signin_notification_condition_of_use">Amazon's
